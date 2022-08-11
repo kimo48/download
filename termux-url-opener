@@ -3,7 +3,7 @@ clear
 url=$1
 echo "kimo"
 echo "7: Download with youtube-dl and extract audio"
-echo "8: Download with tiktok"
+echo "8: Download with Tiktok"
 read n
 
 if [ "$n" == '7' ]; then
@@ -18,5 +18,7 @@ echo "$url"
 
 python /data/data/com.termux/files/home/download/download_tiktok.py "$url" "/data/data/com.termux/files/home/storage/shared/Tiktok/"
 
+echo "\033[1;32mdownload complete\n";
+sleep(2);
 fi
 fi
