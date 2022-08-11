@@ -2,8 +2,8 @@
 clear
 kill_color=$'\e[0m'
 url=$1
-$you="yout"
-$tik="tik"
+you="yout"
+tik="tik"
 
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
 echo -e "\e[032m" "║ ♚ Tool Name : kimo48/youtube          ║"
@@ -18,15 +18,15 @@ echo -e "\e[032m" "╠═▶ 2.tiktok"
  
 if [[ "$url" =~ .*"$you".* ]]; then
   echo "youtube"
-  $n=1
+  n=1
 else
 if [[ "$url" =~ .*"$tik".* ]]; then
   echo "tiktok"
-  $n=2
+  n=2
 fi  
 fi 
 
-read n
+read z
 
 if [ "$n" == '1' ]; then
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube"
