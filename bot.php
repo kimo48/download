@@ -19,14 +19,17 @@ system('termux-setup-storage');
 sleep(5);
 system('clear');
 
-echo "\033[1;36mInstalling ffmpeg\n";
-system('pkg install ffmpeg -y');
-
 echo "\033[1;36mInstalling python\n";
 system('pkg install python -y');
 
+echo "\033[1;36mInstalling ffmpeg\n";
+system('pkg install ffmpeg -y');
+
 echo "\033[1;34mInstalling bs4\n";
 system('pip install bs4');
+
+echo "\033[1;34mInstalling re\n";
+system('pip install re');
 
 echo "\033[1;34mInstalling flask\n";
 system('pip install flask');
