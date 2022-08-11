@@ -2,6 +2,8 @@
 clear
 kill_color=$'\e[0m'
 url=$1
+$you="yout"
+$tik="tik"
 
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
 echo -e "\e[032m" "║ ♚ Tool Name : kimo48/youtube          ║"
@@ -11,6 +13,16 @@ echo -e "\e[036m" "╠═══════════════════�
 echo -e "\e[032m" "╠═▶ 1.youtube"
 echo -e "\e[032m" "╠═▶ 2.tiktok"
  printf "\e[032m  ╚═:➤ $kill_color"
+ 
+ 
+ 
+if [[ "$STR" =~ .*"$you".* ]]; then
+  echo "youtube"
+else
+if [[ "$STR" =~ .*"$tik".* ]]; then
+  echo "tiktok"
+fi  
+fi 
 read n
 
 if [ "$n" == '1' ]; then
@@ -30,10 +42,11 @@ path="$(echo $url | grep / | cut -d/ -f4-)"
 
 echo $path | sed 's#/.*##g'
 
-$path=$path+'.mp3'
+$mp3=$path+'.mp3'
+echo $mp3
 read n
 
-play "/data/data/com.termux/files/home/storage/shared/Tiktok/$path"
+play "/data/data/com.termux/files/home/storage/shared/Tiktok/$mp3"
 echo "download complete"
 
 fi
