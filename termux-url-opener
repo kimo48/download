@@ -40,6 +40,7 @@ if [ "$n" == '9' ]; then
 read n
 
 if [ "$n" == '3' ]; then
+echo "download mp3"
 echo "$url"
 
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok"
@@ -64,7 +65,7 @@ echo "download complete"
 else
 
 if [ "$n" == '2' ]; then
-
+echo "download video"
 echo "$url"
 
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok"
