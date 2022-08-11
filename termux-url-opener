@@ -1,6 +1,8 @@
 #!/bin/bash
 clear
 url=$1
+tit="1"
+mp3="mp3"
 echo "kimo"
 echo "7: Download with youtube-dl and extract audio"
 echo "8: Download with Tiktok"
@@ -16,7 +18,7 @@ echo "$url"
 
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok/"
 
-python /data/data/com.termux/files/home/download/download_tiktok.py "$url" "/data/data/com.termux/files/home/storage/shared/Tiktok/1.mp3"
+python /data/data/com.termux/files/home/download/download_tiktok.py "$url" "/data/data/com.termux/files/home/storage/shared/Tiktok/%(tit)s.%(mp3)s"
 
 echo "download complete"
 
