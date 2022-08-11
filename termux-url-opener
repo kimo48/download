@@ -44,8 +44,8 @@ mp2="$(echo $url | grep / | cut -d"/" -f2,3)"
 echo $mp2
 
 
-#mp2= "$(echo $path | sed 's#/.*##g')"
-#echo $mp2
+mp2= "$(echo $mp2 | sed 's#/.*##g')"
+echo $mp2
 
 mp3="$(echo "${mp2}.mp3")"
 echo $mp3
