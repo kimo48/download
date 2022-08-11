@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from re import findall
+from regex import findall
 import sys
 from tiktok import ttdownloader
 url=str(sys.argv[1])
