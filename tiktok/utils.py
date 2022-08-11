@@ -27,32 +27,16 @@ class Odummy:
 
 class info_videotiktok:
 
-    def __init__(
-        self,
-        url: str,
-        Session: Session,
-        type='video',
-        watermark: bool = False
-    ) -> None:
+    def __init__(self,url: str,Session: Session, type='video',watermark: bool = False) -> None:
         self.json = url
         self.type = type
         self.Session = Session
         self.watermark = watermark
 
     def get_size(self) -> int:
-        return int(
-            self.Session.get(
-                self.json,
-                stream=True
-            ).headers["Content-Length"]
-        )
+        return int(self.Session.get(self.json,stream=True ).headers["Content-Length"])
 
-    def download(
-        self,
-        out: Optional[Union[str, BufferedWriter]] = None,
-        chunk_size=1024,
-        bar=False
-    ) -> Union[None, BytesIO, BufferedWriter]:
+    def download(self,out: Optional[Union[str, BufferedWriter]] = None,chunk_size=1024,bar=True) -> Union[None, BytesIO, BufferedWriter]:
         request = self.Session.get(self.json, stream=True)
         stream = out if isinstance(
             out,
