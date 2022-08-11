@@ -40,7 +40,7 @@ python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
 
 #mp2="$(echo $url | grep / | cut -f1-4 -d)"
 
-mp1="$(echo $url | grep / | cut -d"/" -f2,3)"
+mp1="$(echo $url | grep / | cut -d"/" -f4)"
 echo $mp1
 
 
