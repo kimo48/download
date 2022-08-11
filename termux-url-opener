@@ -29,6 +29,9 @@ fi
 if [ "$n" == '1' ]; then
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube"
 youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s"
+
+play "/data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.mp3"
+
 else
 
 if [ "$n" == '2' ]; then
