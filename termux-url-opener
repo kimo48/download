@@ -26,9 +26,7 @@ echo "$url"
 python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
 
 path="$(echo $url | grep / | cut -d/ -f4-)"
-echo $path |sed 's//.*//'
-
-#echo "  path: $path"
+echo $path | sed 's#/.*##g'
 
 read n
 
