@@ -50,7 +50,7 @@ echo $mp1
 mp3="$(echo "${mp1}.mp3")"
 echo $mp3
 
-read n
+#read n
 
 play "/data/data/com.termux/files/home/storage/shared/Tiktok/$mp3"
 echo "download complete"
