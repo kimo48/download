@@ -27,7 +27,7 @@ python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
 
 read n
 
-play '/data/data/com.termux/files/home/storage/shared/Tiktok/'$n'.mp3'
+play "/data/data/com.termux/files/home/storage/shared/Tiktok/%(n)s"
 echo "download complete"
 
 fi
