@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 clear
+kill_color=$'\e[0m'
 url=$1
 
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
@@ -9,7 +10,7 @@ echo -e "\e[032m" "║ ♚ Github : github.com/kimo48/youtube  ║"
 echo -e "\e[036m" "╠════════════════════════════════════════╝"
 echo -e "\e[032m" "╠═▶ 1.youtube"
 echo -e "\e[032m" "╠═▶ 2.tiktok"
-
+ printf "\e[032m  ╚═:➤ $kill_color"
 read n
 
 if [ "$n" == '1' ]; then
