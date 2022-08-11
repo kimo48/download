@@ -39,7 +39,7 @@ echo "$url"
 python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
 
 #mp2="$(echo $url | grep / | cut -f1-4 -d)"
-mp2="$(echo $url | grep / | cut -d/ -f1-4-)"
+mp2="$(echo $url | grep / | cut -d/ -f2-4-)"
 echo $mp2
 
 #mp2= "$(echo $path | sed 's#/.*##g')"
