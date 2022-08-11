@@ -29,7 +29,7 @@ echo "\033[1;34mInstalling bs4\n";
 system('pip install bs4');
 
 echo "\033[1;34mInstalling re\n";
-system('pip install re');
+system('pip install regex');
 
 echo "\033[1;34mInstalling flask\n";
 system('pip install flask');
