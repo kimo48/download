@@ -18,7 +18,7 @@ echo "$url"
 
 python /data/data/com.termux/files/home/download/download_tiktok.py "$url" "/data/data/com.termux/files/home/storage/shared/Tiktok/"
 
-echo "\033[1;32mdownload complete\n";
-sleep(2);
+echo "download complete"
+
 fi
 fi
