@@ -11,7 +11,7 @@ d=ttdownloader(url)
 mp3=str(findall(r'([a-zA-Z]\w+)', url)[4])+'.mp3'
 print(mp3)
 
-d[2].download('./home/storage/shared/Tiktok/'+mp3)
+d[2].download('./storage/shared/Tiktok/'+mp3)
 
 #print (str(sys.argv[1]))
 
