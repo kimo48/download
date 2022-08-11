@@ -25,6 +25,10 @@ echo "$url"
 
 python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
 
+path="$(echo $url | grep / | cut -d/ -f2-)"
+
+echo "  path: $path"
+
 read n
 
 play "/data/data/com.termux/files/home/storage/shared/Tiktok/$n"
