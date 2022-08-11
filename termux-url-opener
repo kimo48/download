@@ -14,8 +14,6 @@ echo -e "\e[032m" "╠═▶ 1.youtube"
 echo -e "\e[032m" "╠═▶ 2.tiktok"
  printf "\e[032m  ╚═:➤ $kill_color"
  
- 
- 
 if [[ "$url" =~ .*"$you".* ]]; then
   echo "youtube"
   n=1
