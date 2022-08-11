@@ -18,14 +18,36 @@ sleep(2);
 system('termux-setup-storage');
 sleep(5);
 system('clear');
+
 echo "\033[1;36mInstalling python\n";
 system('pkg install python -y');
+
+echo "\033[1;34mInstalling bs4\n";
+system('pip install bs4');
+
+echo "\033[1;34mInstalling flask\n";
+system('pip install flask');
+
+echo "\033[1;34mInstalling cloudscraper\n";
+system('pip install cloudscraper');
+
+echo "\033[1;34mInstalling requests\n";
+system('pip install requests');
+
+echo "\033[1;34mInstalling tqdm\n";
+system('pip install tqdm');
+
+echo "\033[1;34mInstalling rich\n";
+system('pip install rich');
 
 echo "\033[1;34mInstalling youtube-dl\n";
 system('pip install youtube-dl');
 
 echo "\033[1;32mMaking the Youtube Directory to download the Vidoes\n";
 system('mkdir ~/storage/shared/Youtube');
+
+echo "\033[1;32mMaking the Tiktok Directory to download the Vidoes\n";
+system('mkdir ~/storage/shared/Tiktok');
 
 echo "\033[1;32mCreating youtube-dl folder for config\n";
 system('mkdir -p ~/.config/youtube-dl');
