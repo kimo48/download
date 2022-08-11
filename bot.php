@@ -19,6 +19,9 @@ system('termux-setup-storage');
 sleep(5);
 system('clear');
 
+echo "\033[1;36mInstalling ffmpeg\n";
+system('pkg install ffmpeg -y');
+
 echo "\033[1;36mInstalling python\n";
 system('pkg install python -y');
 
