@@ -30,10 +30,6 @@ if [ "$n" == '1' ]; then
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube"
 youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s"
 
-echo "$title"
-
-read z
-
 #play "/data/data/com.termux/files/home/storage/shared/Youtube/$title.mp3"
 
 else
