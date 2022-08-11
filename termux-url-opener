@@ -8,16 +8,16 @@ read n
 
 
 if [ "$n" == '7' ]; then
-[ ! -d "/data/data/com.termux/files/home/storage/downloads/youtube-dl" ] && mkdir "/data/data/com.termux/files/home/storage/downloads/youtube-dl"
-youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/downloads/youtube-dl/%(title)s.%(ext)s"
+[ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube/" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube/"
+youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s"
 else
 
 if [ "$n" == '8' ]; then
 echo "$url"
 
-[ ! -d "/data/data/com.termux/files/home/storage/downloads/tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/downloads/tiktok"
+[ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube/" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube/"
 
-python download_tiktok.py "$url" "/data/data/com.termux/files/home/storage/downloads/tiktok"
+python /data/data/com.termux/files/home/download/download_tiktok.py "$url" "/data/data/com.termux/files/home/storage/shared/Youtube/"
 
 fi
 fi
