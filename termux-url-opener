@@ -24,7 +24,7 @@ if [[ "$url" =~ .*"$tik".* ]]; then
 fi  
 fi 
 
-read z
+#read z
 
 if [ "$n" == '1' ]; then
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube"
