@@ -6,7 +6,6 @@ echo "7: Download with youtube-dl and extract audio"
 echo "8: Download with tiktok"
 read n
 
-
 if [ "$n" == '7' ]; then
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube/" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube/"
 youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s"
