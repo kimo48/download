@@ -24,7 +24,13 @@ echo "$url"
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok"
 
 python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
-play /data/data/com.termux/files/home/storage/shared/Tiktok/1.mp3
+
+
+$A="$(cut -d'/' -f4 <<<"url")"
+echo "$A"
+
+
+play '/data/data/com.termux/files/home/storage/shared/Tiktok/'$A'.mp3'
 echo "download complete"
 
 fi
