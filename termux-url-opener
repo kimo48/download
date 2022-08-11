@@ -10,9 +10,10 @@ echo -e "\e[032m" "║ ♚ Tool Name : kimo48/youtube          ║"
 echo -e "\e[032m" "║ ♚ Author : kimo                       ║"
 echo -e "\e[032m" "║ ♚ Github : github.com/kimo48/youtube  ║"
 echo -e "\e[036m" "╠════════════════════════════════════════╝"
-echo -e "\e[032m" "╠═▶ 1.youtube"
+echo -e "\e[032m" "╠═▶ 1.youtube mp3"
 echo -e "\e[032m" "╠═▶ 2.tiktok video"
 echo -e "\e[032m" "╠═▶ 3.tiktok mp3"
+echo -e "\e[032m" "╠═▶ 4.facebook video"
  printf "\e[032m  ╚═:➤ $kill_color"
  
 if [[ "$url" =~ .*"$you".* ]]; then
@@ -39,6 +40,15 @@ if [ "$n" == '9' ]; then
 
 read n
 
+if [ "$n" == '2' ]; then
+echo "download video"
+echo "$url"
+
+[ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok"
+python /data/data/com.termux/files/home/download/download_tiktok_mp4.py "$url"
+echo "download complete"
+else
+
 if [ "$n" == '3' ]; then
 echo "download mp3"
 echo "$url"
@@ -62,16 +72,18 @@ echo $mp3
 
 play "/data/data/com.termux/files/home/storage/shared/Tiktok/$mp3"
 echo "download complete"
-else
 
-if [ "$n" == '2' ]; then
+
+if [ "$n" == '4' ]; then
 echo "download video"
 echo "$url"
 
-[ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok"
-python /data/data/com.termux/files/home/download/download_tiktok_mp4.py "$url"
+[ ! -d "/data/data/com.termux/files/home/storage/shared/Facebook" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Facebook"
+python /data/data/com.termux/files/home/download/download_facebook_mp4.py "$url"
 echo "download complete"
 
+
+fi
 fi
 fi
 fi
