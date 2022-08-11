@@ -14,9 +14,9 @@ else
 if [ "$n" == '8' ]; then
 echo "$url"
 
-[ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube/" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube/"
+[ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok/" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok/"
 
-python /data/data/com.termux/files/home/download/download_tiktok.py "$url" "/data/data/com.termux/files/home/storage/shared/Youtube/"
+python /data/data/com.termux/files/home/download/download_tiktok.py "$url" "/data/data/com.termux/files/home/storage/shared/Tiktok/"
 
 fi
 fi
