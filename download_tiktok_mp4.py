@@ -9,7 +9,7 @@ url=str(sys.argv[1])
 d=ttdownloader(url)
 
 mp4=str(findall(r'([a-zA-Z]\w+)', url)[4])+'.mp4'
-d[2].download('./storage/shared/Tiktok/'+mp4)
+d[0].download('./storage/shared/Tiktok/'+mp4)
 
 #print(mp4)
 
