@@ -51,7 +51,6 @@ python /data/data/com.termux/files/home/download/download_tiktok_mp3.py "$url"
 mp1="$(echo $url | grep / | cut -d"/" -f4)"
 echo $mp1
 
-
 #mp2= "$(echo $mp1 | sed 's#/.*##g')"
 #echo $mp2
 
@@ -66,15 +65,13 @@ else
 
 if [ "$n" == '2' ]; then
 
+echo "$url"
 
+[ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok"
+python /data/data/com.termux/files/home/download/download_tiktok_mp4.py "$url"
+echo "download complete"
 
-
-
-
-
-
-
-
+fi
 fi
 fi
 fi
