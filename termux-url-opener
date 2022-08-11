@@ -43,9 +43,9 @@ python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
 #path="$(echo $url | grep / | cut -f1-3 -d)"
 path="$(echo $url | grep / | cut -d/ -f4-)"
 
-$mp2= $path | sed 's#/.*##g'
+mp2= $path | sed 's#/.*##g'
 
-$mp3=$mp2+'.mp3'
+mp3=$mp2+'.mp3'
 echo $mp3
 
 read n
