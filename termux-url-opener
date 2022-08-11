@@ -40,6 +40,7 @@ python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
 
 #path="$(echo $url | grep / | cut -f1-3 -d)"
 path="$(echo $url | grep / | cut -d/ -f4-)"
+echo $path
 
 mp2= "$(echo $path | sed 's#/.*##g')"
 echo $mp2
