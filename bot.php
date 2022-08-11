@@ -55,6 +55,9 @@ system('mkdir ~/storage/shared/Youtube');
 echo "\033[1;32mMaking the Tiktok Directory to download the Vidoes\n";
 system('mkdir ~/storage/shared/Tiktok');
 
+echo "\033[1;32mMaking the Facebook Directory to download the Vidoes\n";
+system('mkdir ~/storage/shared/Facebook');
+
 echo "\033[1;32mCreating youtube-dl folder for config\n";
 system('mkdir -p ~/.config/youtube-dl');
 
