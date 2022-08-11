@@ -11,7 +11,8 @@ echo -e "\e[032m" "║ ♚ Author : kimo                       ║"
 echo -e "\e[032m" "║ ♚ Github : github.com/kimo48/youtube  ║"
 echo -e "\e[036m" "╠════════════════════════════════════════╝"
 echo -e "\e[032m" "╠═▶ 1.youtube"
-echo -e "\e[032m" "╠═▶ 2.tiktok"
+echo -e "\e[032m" "╠═▶ 2.tiktok video"
+echo -e "\e[032m" "╠═▶ 3.tiktok mp3"
  printf "\e[032m  ╚═:➤ $kill_color"
  
 if [[ "$url" =~ .*"$you".* ]]; then
@@ -20,7 +21,7 @@ if [[ "$url" =~ .*"$you".* ]]; then
 else
 if [[ "$url" =~ .*"$tik".* ]]; then
   echo "tiktok"
-  n=2
+  n=9
 fi  
 fi 
 
@@ -34,12 +35,16 @@ youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o 
 
 else
 
-if [ "$n" == '2' ]; then
+if [ "$n" == '9' ]; then
+
+read n
+
+if [ "$n" == '3' ]; then
 echo "$url"
 
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok"
 
-python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
+python /data/data/com.termux/files/home/download/download_tiktok_mp3.py "$url"
 
 #mp2="$(echo $url | grep / | cut -f1-4 -d)"
 
@@ -57,6 +62,19 @@ echo $mp3
 
 play "/data/data/com.termux/files/home/storage/shared/Tiktok/$mp3"
 echo "download complete"
+else
 
+if [ "$n" == '2' ]; then
+
+
+
+
+
+
+
+
+
+
+fi
 fi
 fi
