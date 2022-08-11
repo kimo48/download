@@ -25,6 +25,9 @@ system('pkg install python -y');
 echo "\033[1;36mInstalling ffmpeg\n";
 system('pkg install ffmpeg -y');
 
+echo "\033[1;34mInstalling requests\n";
+system('pip install requests');
+
 echo "\033[1;34mInstalling bs4\n";
 system('pip install bs4');
 
@@ -37,8 +40,8 @@ system('pip install flask');
 echo "\033[1;34mInstalling cloudscraper\n";
 system('pip install cloudscraper');
 
-echo "\033[1;34mInstalling requests\n";
-system('pip install requests');
+echo "\033[1;34mInstalling random\n";
+system('pip install random');
 
 echo "\033[1;34mInstalling tqdm\n";
 system('pip install tqdm');
