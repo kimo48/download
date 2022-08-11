@@ -44,10 +44,10 @@ mp1="$(echo $url | grep / | cut -d"/" -f4)"
 echo $mp1
 
 
-mp2= "$(echo $mp1 | sed 's#/.*##g')"
-echo $mp2
+#mp2= "$(echo $mp1 | sed 's#/.*##g')"
+#echo $mp2
 
-mp3="$(echo "${mp2}.mp3")"
+mp3="$(echo "${mp1}.mp3")"
 echo $mp3
 
 read n
