@@ -16,14 +16,17 @@ echo -e "\e[032m" "╠═▶ 2.tiktok"
  
  
  
-if [[ "$STR" =~ .*"$you".* ]]; then
+if [[ "$url" =~ .*"$you".* ]]; then
   echo "youtube"
+  $n=1
 else
-if [[ "$STR" =~ .*"$tik".* ]]; then
+if [[ "$url" =~ .*"$tik".* ]]; then
   echo "tiktok"
+  $n=2
 fi  
 fi 
-read n
+
+#read n
 
 if [ "$n" == '1' ]; then
 [ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube"
@@ -40,11 +43,12 @@ python /data/data/com.termux/files/home/download/download_tiktok.py "$url"
 #path="$(echo $url | grep / | cut -f1-3 -d)"
 path="$(echo $url | grep / | cut -d/ -f4-)"
 
-echo $path | sed 's#/.*##g'
+$mp2= $path | sed 's#/.*##g'
 
-$mp3=$path+'.mp3'
+$mp3=$mp2+'.mp3'
 echo $mp3
-read n
+
+#read n
 
 play "/data/data/com.termux/files/home/storage/shared/Tiktok/$mp3"
 echo "download complete"
