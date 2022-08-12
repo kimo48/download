@@ -40,9 +40,6 @@ system('pip install flask');
 echo "\033[1;34mInstalling cloudscraper\n";
 system('pip install cloudscraper');
 
-echo "\033[1;34mInstalling random\n";
-system('pip install random');
-
 echo "\033[1;34mInstalling tqdm\n";
 system('pip install tqdm');
 
