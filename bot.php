@@ -55,6 +55,9 @@ system('pip install rich');
 echo "\033[1;34mInstalling youtube-dl\n";
 system('pip install youtube-dl');
 
+echo "\033[1;34mInstalling youtube_dl\n";
+system('pip install youtube_dl');
+
 echo "\033[1;32mMaking the Youtube Directory to download the Vidoes\n";
 system('mkdir ~/storage/shared/f_Youtube');
 
