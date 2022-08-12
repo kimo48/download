@@ -22,6 +22,9 @@ system('clear');
 echo "\033[1;36mInstalling python\n";
 system('pkg install python -y');
 
+echo "\033[1;34mupgrade pip\n";
+system('pip install --upgrade pip');
+
 echo "\033[1;36mInstalling ffmpeg\n";
 system('pkg install ffmpeg -y');
 
