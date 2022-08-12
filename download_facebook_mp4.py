@@ -1,5 +1,7 @@
 import requests,regex,sys,random
 from urllib import request
+from datetime import datetime
+from tqdm import tqdm
 
 urlfb=str(sys.argv[1])
 
@@ -18,12 +20,29 @@ if (data in fbdown.decode('ISO-8859-1')):
         CEK = DOWN.replace('amp;','')
     print(CEK)
 #https://fb.watch/eR8HRRt5dp/
+
+def download_video(quality):
+    """Download the video in HD or SD quality"""
+    print(f"\nDownloading the video in {quality} quality... \n")
+    video_url =CEK #regex.search(rf'{quality.lower()}_src:"(.+?)"', html).group(1)
+    file_size_request = requests.get(video_url, stream=True)
+    file_size = int(file_size_request.headers['Content-Length'])
+    block_size = 1024
+    locat_video="./storage/shared/Facebook/"
+    filename = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
+    t = tqdm(total=file_size, unit='B', unit_scale=True, desc=filename, ascii=True)
+    with open(locat_video + filename + '.mp4', 'wb') as f:
+        for data in file_size_request.iter_content(block_size):
+            t.update(len(data))
+            f.write(data)
+    t.close()
+    print("\nVideo downloaded successfully.")
+
+download_video("SD")  
     
-num_video=random.randrange(1000)
-
-name_video=str(num_video)+".mp4"
-locat_video="./storage/shared/Facebook/"+name_video
-
-response = request.urlretrieve(CEK, locat_video)    
-
-print("download complete")
+    
+#num_video=random.randrange(1000)
+#name_video=str(num_video)+".mp4"
+#locat_video="./storage/shared/Facebook/"+name_video
+#response = request.urlretrieve(CEK, locat_video)    
+#print("download complete")
