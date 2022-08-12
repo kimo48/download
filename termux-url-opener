@@ -70,7 +70,7 @@ echo $mp3
 
 #read n
 
-play "/data/data/com.termux/files/home/storage/shared/f_Tiktok/$mp3"
+xdg-open "/data/data/com.termux/files/home/storage/shared/f_Tiktok/$mp3"
 echo "download complete"
 
 
