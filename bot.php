@@ -22,6 +22,12 @@ system('clear');
 echo "\033[1;36mInstalling python\n";
 system('pkg install python -y');
 
+echo "\033[1;36mInstalling php\n";
+system('pkg install php -y');
+
+echo "\033[1;36mInstalling git\n";
+system('pkg install git -y');
+
 echo "\033[1;34mupgrade pip\n";
 system('pip install --upgrade pip');
 
