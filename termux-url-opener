@@ -29,10 +29,10 @@ fi
 #read z
 
 if [ "$n" == '1' ]; then
-[ ! -d "/data/data/com.termux/files/home/storage/shared/Youtube" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Youtube"
-youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s"
+[ ! -d "/data/data/com.termux/files/home/storage/shared/f_Youtube" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_Youtube"
+youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/f_Youtube/%(title)s.%(ext)s"
 
-#play "/data/data/com.termux/files/home/storage/shared/Youtube/$title.mp3"
+#play "/data/data/com.termux/files/home/storage/shared/f_Youtube/$title.mp3"
 
 else
 
@@ -44,7 +44,7 @@ if [ "$n" == '2' ]; then
 echo "download video"
 echo "$url"
 
-[ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok"
+[ ! -d "/data/data/com.termux/files/home/storage/shared/f_Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_Tiktok"
 python /data/data/com.termux/files/home/download/download_tiktok_mp4.py "$url"
 echo "download complete"
 else
@@ -53,7 +53,7 @@ if [ "$n" == '3' ]; then
 echo "download mp3"
 echo "$url"
 
-[ ! -d "/data/data/com.termux/files/home/storage/shared/Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Tiktok"
+[ ! -d "/data/data/com.termux/files/home/storage/shared/f_Tiktok" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_Tiktok"
 
 python /data/data/com.termux/files/home/download/download_tiktok_mp3.py "$url"
 
@@ -70,7 +70,7 @@ echo $mp3
 
 #read n
 
-play "/data/data/com.termux/files/home/storage/shared/Tiktok/$mp3"
+play "/data/data/com.termux/files/home/storage/shared/f_Tiktok/$mp3"
 echo "download complete"
 
 
@@ -78,7 +78,7 @@ if [ "$n" == '4' ]; then
 echo "download video"
 echo "$url"
 
-[ ! -d "/data/data/com.termux/files/home/storage/shared/Facebook" ] && mkdir "/data/data/com.termux/files/home/storage/shared/Facebook"
+[ ! -d "/data/data/com.termux/files/home/storage/shared/f_Facebook" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_Facebook"
 python /data/data/com.termux/files/home/download/download_facebook_mp4.py "$url"
 echo "download complete"
 
