@@ -38,7 +38,6 @@ echo "$titre"
 
 #youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/f_Youtube/%(title)s.%(ext)s"
 
-
 yt-dlp -f 'ba' -x --audio-format mp3 $url -o '/data/data/com.termux/files/home/storage/shared/f_Youtube/%(title)s.%(ext)s'
 
 #play "/data/data/com.termux/files/home/storage/shared/f_Youtube/$titre.mp3"
@@ -79,9 +78,9 @@ echo $mp3
 
 #read n
 
-xdg-open "/data/data/com.termux/files/home/storage/shared/f_Tiktok/$mp3"
-echo "download complete"
+#xdg-open "/data/data/com.termux/files/home/storage/shared/f_Tiktok/$mp3"
 
+echo "download complete"
 
 if [ "$n" == '4' ]; then
 echo "download video"
@@ -90,7 +89,6 @@ echo "$url"
 [ ! -d "/data/data/com.termux/files/home/storage/shared/f_Facebook" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_Facebook"
 python /data/data/com.termux/files/home/download/download_facebook_mp4.py "$url"
 echo "download complete"
-
 
 fi
 fi
