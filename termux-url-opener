@@ -34,7 +34,7 @@ if [ "$n" == '1' ]; then
 titre=$(python /data/data/com.termux/files/home/download/download_youtube_title.py "$url")
 
 echo "$titre"
-read n
+#read n
 
 #youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/f_Youtube/%(title)s.%(ext)s"
 
