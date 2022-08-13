@@ -39,7 +39,7 @@ echo "$titre"
 #youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/f_Youtube/%(title)s.%(ext)s"
 
 
-yt-dlp -f 'ba' $url -o '/data/data/com.termux/files/home/storage/shared/f_Youtube/%(title)s.%(ext)s'
+yt-dlp -f 'ba' -x --audio-format mp3 $url -o '/data/data/com.termux/files/home/storage/shared/f_Youtube/%(title)s.%(ext)s'
 
 #play "/data/data/com.termux/files/home/storage/shared/f_Youtube/$titre.mp3"
 
