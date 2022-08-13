@@ -31,7 +31,7 @@ fi
 if [ "$n" == '1' ]; then
 [ ! -d "/data/data/com.termux/files/home/storage/shared/f_Youtube" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_Youtube"
 
-python /data/data/com.termux/files/home/download/download_youtube_title.py "$url" >> titre
+titre=$(python /data/data/com.termux/files/home/download/download_youtube_title.py "$url")
 
 echo "$titre"
 read n
