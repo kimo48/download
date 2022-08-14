@@ -30,7 +30,6 @@ if [[ "$url" =~ .*"$insta".* ]]; then
   echo "$url"
   url0="$(echo $url | grep / | cut -d"/" -f 1-5)"
   echo $url0
-  read n
   url1="https://sssinstagram.com/"
   url2="$url1$url0"
   xdg-open $url2
