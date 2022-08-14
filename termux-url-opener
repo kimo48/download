@@ -4,7 +4,7 @@ kill_color=$'\e[0m'
 url=$1
 you="yout"
 tik="tik"
-
+insta="insta"
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
 echo -e "\e[032m" "║ ♚ Tool Name : kimo48/youtube          ║"
 echo -e "\e[032m" "║ ♚ Author : kimo                       ║"
@@ -14,6 +14,7 @@ echo -e "\e[032m" "╠═▶ 1.youtube mp3"
 echo -e "\e[032m" "╠═▶ 2.tiktok video"
 echo -e "\e[032m" "╠═▶ 3.tiktok mp3"
 echo -e "\e[032m" "╠═▶ 4.facebook video"
+echo -e "\e[032m" "╠═▶ 5.instagram video & photo"
  printf "\e[032m  ╚═:➤ $kill_color"
  
 if [[ "$url" =~ .*"$you".* ]]; then
@@ -23,8 +24,22 @@ else
 if [[ "$url" =~ .*"$tik".* ]]; then
   echo "tiktok"
   n=9
+else
+if [[ "$url" =~ .*"$insta".* ]]; then
+  echo "instagram"
+  echo "$url"
+  url0="$(echo $url | grep / | cut -d"/" -f 1-5)"
+  echo $url0
+  read n
+  url1="https://sssinstagram.com/"
+  url2="$url1$url0"
+  xdg-open $url2
+  
+fi   
 fi  
 fi 
+
+
 
 #read z
 
