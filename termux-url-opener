@@ -14,7 +14,7 @@ echo -e "\e[032m" "╠═▶ 1.youtube mp3"
 echo -e "\e[032m" "╠═▶ 2.tiktok video"
 echo -e "\e[032m" "╠═▶ 3.tiktok mp3"
 echo -e "\e[032m" "╠═▶ 4.facebook video"
-echo -e "\e[032m" "╠═▶ 5.instagram video & photo"
+echo -e "\e[032m" "╠═▶ 5.instagram video"
  printf "\e[032m  ╚═:➤ $kill_color"
  
 if [[ "$url" =~ .*"$you".* ]]; then
@@ -28,32 +28,27 @@ else
 if [[ "$url" =~ .*"$insta".* ]]; then
   echo "instagram"
   echo "$url"
-  url0="$(echo $url | grep / | cut -d"/" -f 1-5)"
-  echo $url0
-  url1="https://sssinstagram.com/"
-  url2="$url1$url0"
-  xdg-open $url2
-  
+  #url0="$(echo $url | grep / | cut -d"/" -f 1-5)"
+  #echo $url0
+  #url1="https://sssinstagram.com/"
+  #url2="$url1$url0"
+  #xdg-open $url2
+  echo "$url"
+  [ ! -d "/data/data/com.termux/files/home/storage/shared/f_instagram/" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_instagram/"
+  python /data/data/com.termux/files/home/insta/main.py "$url"
+  xdg-open ../storage/shared/f_instagram/
 fi   
 fi  
 fi 
-
-
-
-#read z
 
 if [ "$n" == '1' ]; then
 [ ! -d "/data/data/com.termux/files/home/storage/shared/f_Youtube" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_Youtube"
 
 titre=$(python /data/data/com.termux/files/home/download/download_youtube_title.py "$url")
-
 echo "$titre"
-#read n
 
 #youtube-dl -x --audio-format mp3 -f bestaudio --audio-quality 0 -c -i "$url" -o "/data/data/com.termux/files/home/storage/shared/f_Youtube/%(title)s.%(ext)s"
-
 yt-dlp -f 'ba' -x --audio-format mp3 $url -o '/data/data/com.termux/files/home/storage/shared/f_Youtube/%(title)s.%(ext)s'
-
 #play "/data/data/com.termux/files/home/storage/shared/f_Youtube/$titre.mp3"
 
 else
@@ -89,8 +84,6 @@ echo $mp1
 
 mp3="$(echo "${mp1}.mp3")"
 echo $mp3
-
-#read n
 
 #xdg-open "/data/data/com.termux/files/home/storage/shared/f_Tiktok/$mp3"
 
