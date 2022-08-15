@@ -61,8 +61,7 @@ system('pip install youtube-dl');
 echo "\033[1;34mInstalling youtube_dl\n";
 system('pip install youtube_dl');
 
-echo "\033[1;34mInstalling youtube_dlp\n";
-
+echo "\033[1;34mInstalling yt-dlp\n";
 system('pip install yt-dlp');
 
 echo "\033[1;32mMaking the Youtube Directory to download the Vidoes\n";
