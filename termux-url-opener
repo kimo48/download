@@ -35,7 +35,7 @@ if [[ "$url" =~ .*"$insta".* ]]; then
   #xdg-open $url2
   echo "$url"
   [ ! -d "/data/data/com.termux/files/home/storage/shared/f_instagram/" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_instagram/"
-  python /data/data/com.termux/files/home/insta/main.py "$url"
+  python /data/data/com.termux/files/home/download/download_instagram_mp4.py "$url"
   xdg-open ../storage/shared/f_instagram/
 fi   
 fi  
