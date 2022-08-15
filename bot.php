@@ -7,22 +7,22 @@
 #$bluesky = "#\033[1;36m";
 system('clear');
 
-$banner2 = "\033[1;32mUpdating default packages \n\n";
+$banner2 = "\033[1;31mUpdating default packages \n\n";
 echo $banner2;
 system('apt update && apt upgrade -y');
 
 echo "\033[1;32mRequesting acces to storage\n";
 sleep(2);
-echo "\033[1;32mAllow Storage Permission!\n";
+echo "\033[1;33mAllow Storage Permission!\n";
 sleep(2);
 system('termux-setup-storage');
 sleep(5);
 system('clear');
 
-echo "\033[1;36mInstalling vim\n";
+echo "\033[1;34mInstalling vim\n";
 system('pkg install vim -y');
 
-echo "\033[1;36mInstalling python\n";
+echo "\033[1;35mInstalling python\n";
 system('pkg install python -y');
 
 echo "\033[1;36mInstalling php\n";
