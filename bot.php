@@ -74,6 +74,9 @@ system('mkdir ~/storage/shared/f_Tiktok');
 echo "\033[1;32mMaking the Facebook Directory to download the Vidoes\n";
 system('mkdir ~/storage/shared/f_Facebook');
 
+echo "\033[1;32mMaking the insta Directory to download the Vidoes\n";
+system('mkdir ~/storage/shared/f_instagram');
+
 echo "\033[1;32mCreating youtube-dl folder for config\n";
 system('mkdir -p ~/.config/youtube-dl');
 
