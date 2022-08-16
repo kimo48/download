@@ -28,10 +28,7 @@ else
 if [[ "$url" =~ .*"$insta".* ]]; then
   echo "instagram"
   echo "$url"
-  echo "click enter"
-  read n
   python /data/data/com.termux/files/home/download/download_instagram_mp4.py "$url"
-  echo "click enter pour telecharger une autre fois"
   read n
 fi   
 fi  
