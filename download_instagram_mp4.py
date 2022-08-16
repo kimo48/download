@@ -1,6 +1,6 @@
 import requests,regex,sys,re
 import urllib.parse
-from datetime import datetime
+#from datetime import datetime
 from tqdm import tqdm
 #from urllib import request
 #import requests
@@ -65,8 +65,7 @@ def download_video():
     file_size_request = requests.get(video_url, stream=True)
     file_size = int(file_size_request.headers['Content-Length'])
     block_size = 1024
-    locat_video="C:/Users/ssd/Desktop/"
-    filename = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
+    locat_video="/data/data/com.termux/files/home/storage/shared/f_instagram/"
     t = tqdm(total=file_size, unit='B', unit_scale=True, desc=filename, ascii=True)
     with open(locat_video + final_char_title + '.mp4', 'wb') as f:
         for data in file_size_request.iter_content(block_size):
