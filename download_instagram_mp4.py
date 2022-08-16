@@ -1,4 +1,4 @@
-import requests,regex,sys,re
+import requests,regex,sys
 import urllib.parse
 #from datetime import datetime
 from tqdm import tqdm
@@ -36,8 +36,8 @@ final_char = debut_char[:size - 9]
 raw_text = html
 start = 'filename'
 end = '.mp4&'
-start_index = re.search(r'\b' + start + r'\b', raw_text).start()
-end_index = re.search(r'\b' + end + r'\b', raw_text).end()
+start_index = regex.search(r'\b' + start + r'\b', raw_text).start()
+end_index = regex.search(r'\b' + end + r'\b', raw_text).end()
 trait_html_title = raw_text[start_index:end_index]
 #print(trait_html_title)
 
