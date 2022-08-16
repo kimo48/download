@@ -28,15 +28,11 @@ else
 if [[ "$url" =~ .*"$insta".* ]]; then
   echo "instagram"
   echo "$url"
-  #url0="$(echo $url | grep / | cut -d"/" -f 1-5)"
-  #echo $url0
-  #url1="https://sssinstagram.com/"
-  #url2="$url1$url0"
-  #xdg-open $url2
-  echo "$url"
-  [ ! -d "/data/data/com.termux/files/home/storage/shared/f_instagram/" ] && mkdir "/data/data/com.termux/files/home/storage/shared/f_instagram/"
+  echo "click enter"
+  read n
   python /data/data/com.termux/files/home/download/download_instagram_mp4.py "$url"
-  xdg-open ../storage/shared/f_instagram/
+  echo "click enter pour telecharger une autre fois"
+  read n
 fi   
 fi  
 fi 
