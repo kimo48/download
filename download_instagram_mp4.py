@@ -56,7 +56,7 @@ def download_video():
     file_size = int(file_size_request.headers['Content-Length'])
     block_size = 1024
     locat_video="/data/data/com.termux/files/home/storage/shared/f_instagram/"
-    t = tqdm(total=file_size, unit='B', unit_scale=True, desc=filename, ascii=True)
+    t = tqdm(total=file_size, unit='B', unit_scale=True, desc=final_char_title, ascii=True)
     with open(locat_video + final_char_title + '.mp4', 'wb') as f:
         for data in file_size_request.iter_content(block_size):
             t.update(len(data))
