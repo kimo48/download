@@ -1,4 +1,4 @@
-import requests,regex,sys
+import requests,regex,sys,time
 import urllib.parse
 #from datetime import datetime
 from tqdm import tqdm
@@ -16,6 +16,7 @@ def scrap():
     data ={'url':urlfb}
     kimo0 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
     response = requests.post(url='https://ssyoutube.com/api/convert',data = data, headers=kimo0)
+    time.sleep(2)
     print("scrap")
     #print(response.url)
     html=urllib.parse.unquote_plus(response.text)
@@ -36,6 +37,7 @@ def scrap():
         size = len(debut_char)
         final_char = debut_char[:size - 9]
         print(final_char)
+        time.sleep(2)
         print("*******************************************************************************")
         raw_text = html
         start = 'filename'
@@ -49,9 +51,11 @@ def scrap():
         size = len(debut_char_title)
         final_char_title = debut_char_title[:size - 5]
         print(final_char_title)
+        time.sleep(2)
         download_video(final_char)
     except:
         print("erreur")
+        time.sleep(2)
         scrap()
 
 
