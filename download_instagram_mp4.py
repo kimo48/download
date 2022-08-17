@@ -71,8 +71,9 @@ def download_video(urll):
     t.close()
     print("downloaded successfully")
 
-
-
+    
+    
+scrap()
 
 
 
