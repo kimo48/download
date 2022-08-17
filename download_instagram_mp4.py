@@ -28,7 +28,7 @@ def scrap():
     try:
         print("startttt")
         start = 'uri='
-        end = '&filename
+        end = '&filename'
         start_index = re.search(r'\b' + start + r'\b', raw_text).start()
         end_index = re.search(r'\b' + end + r'\b', raw_text).end()
         trait_html = raw_text[start_index:end_index]
