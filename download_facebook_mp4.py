@@ -31,7 +31,7 @@ def download_video(quality):
     locat_video="./storage/shared/f_Facebook/"
     filename = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
     t = tqdm(total=file_size, unit='B', unit_scale=True, desc=filename, ascii=True)
-    with open(locat_video + filename + '.mp4', 'wb') as f:
+    with open(locat_video + "filename" + '.mp4', 'wb') as f:
         for data in file_size_request.iter_content(block_size):
             t.update(len(data))
             f.write(data)
