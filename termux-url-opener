@@ -30,8 +30,18 @@ if [[ "$url" =~ .*"$insta".* ]]; then
   echo "$url"
   python /data/data/com.termux/files/home/download/download_instagram_mp4.py "$url"
   read n
+else
+if [[ "$url" =~ .*"$fb".* ]]; then
+  echo "fb video"
+  n=4
+else
+if [[ "$url" =~ .*"$facebook".* ]]; then
+  echo "facebook video"
+  n=4 
+fi
 fi   
 fi  
+fi 
 fi 
 
 if [ "$n" == '1' ]; then
