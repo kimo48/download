@@ -5,6 +5,8 @@ url=$1
 you="yout"
 tik="tik"
 insta="insta"
+fb="fb"
+facebook="facebook"
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
 echo -e "\e[032m" "║ ♚ Tool Name : kimo48/youtube          ║"
 echo -e "\e[032m" "║ ♚ Author : kimo                       ║"
