@@ -1,4 +1,4 @@
-import requests,regex,sys,time
+import requests,sys,time,re
 import urllib.parse
 #from datetime import datetime
 from tqdm import tqdm
@@ -12,23 +12,24 @@ urlfb=str(sys.argv[1])
 
 
 def scrap():
-    print("scrap")
+    print("start insta")
     data ={'url':urlfb}
     kimo0 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
-    response = requests.post(url='https://ssyoutube.com',data = data, headers=kimo0) # https://ssyoutube.com/api/convert
+    response = requests.post(url='https://ssyoutube.com/api/convert',data = data, headers=kimo0)
     time.sleep(2)
-    print("scrap")
     #print(response.url)
     html=urllib.parse.unquote_plus(response.text)
-    #print(html) 
-    #print("*******************************************************************************")
+    #print(html)
+
+    print("*******************************************************************************")
     raw_text = html
     start = 'uri='
     end = '&filename'
     
     try:
-        print("startttt")
+        print("start titre")
         start_index = re.search(r'\b' + start + r'\b', raw_text).start()
+        #print(start_index)
         end_index = re.search(r'\b' + end + r'\b', raw_text).end()
         trait_html = raw_text[start_index:end_index]
         #print(trait_html)
@@ -36,21 +37,23 @@ def scrap():
         debut_char = trait_html[4:]
         size = len(debut_char)
         final_char = debut_char[:size - 9]
-        print(final_char)
+        #print(final_char)
         time.sleep(2)
-        print("*******************************************************************************")
+        #print("*******************************************************************************")
         raw_text = html
-        start = 'filename'
-        end = '.mp4&'
-        start_index = regex.search(r'\b' + start + r'\b', raw_text).start()
-        end_index = regex.search(r'\b' + end + r'\b', raw_text).end()
+        start = 'filename='
+        end = '؟.mp4'
+        start_index = re.search(r'\b' + start + r'\b', raw_text).start()
+        #print(start_index)
+        end_index = re.search(r'\b' + end + r'\b', raw_text).end()
         trait_html_title = raw_text[start_index:end_index]
-        print(trait_html_title)
+        #print(trait_html_title)
         size = len(trait_html_title)
         debut_char_title = trait_html_title[9:]
         size = len(debut_char_title)
         final_char_title = debut_char_title[:size - 5]
         print(final_char_title)
+        return 0
         time.sleep(2)
         download_video(final_char)
     except:
@@ -107,3 +110,4 @@ print("***********************************")
 with open('code.txt', 'w', encoding="utf-8") as f:
     f.write(fbdown.decode('utf-8'))
 '''
+
