@@ -39,8 +39,6 @@ def download_video(quality):
     print("\nVideo downloaded successfully.")
 
 download_video("SD")  
-    
-    
 #num_video=random.randrange(1000)
 #name_video=str(num_video)+".mp4"
 #locat_video="./storage/shared/Facebook/"+name_video
