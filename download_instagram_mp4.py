@@ -15,7 +15,7 @@ def scrap():
     print("scrap")
     data ={'url':urlfb}
     kimo0 = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
-    response = requests.post(url='https://ssyoutube.com/api/convert',data = data, headers=kimo0)
+    response = requests.post(url='https://ssyoutube.com',data = data, headers=kimo0) # https://ssyoutube.com/api/convert
     time.sleep(2)
     print("scrap")
     #print(response.url)
