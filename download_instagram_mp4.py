@@ -7,8 +7,8 @@ from tqdm import tqdm
 #import requests as req
 #from urllib.request import Request, urlopen
 
-#urlfb=str(sys.argv[1])
-urlfb="https://www.instagram.com/reel/Ck5eiPugj0M/"
+urlfb=str(sys.argv[1])
+#urlfb="https://www.instagram.com/reel/Ck5eiPugj0M/"
 #urlfb="https://www.instagram.com/reel/CguUAaZFptq/?igshid=YmMyMTA2M2Y="
 
 
