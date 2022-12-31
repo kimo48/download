@@ -15,7 +15,7 @@ echo "\033[1;32mRequesting acces to storage\n";
 sleep(2);
 echo "\033[1;33mAllow Storage Permission!\n";
 sleep(2);
-system('termux-setup-storage');
+system('termux-setup-storage -y');
 sleep(5);
 system('clear');
 
