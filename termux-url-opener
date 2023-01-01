@@ -9,7 +9,7 @@ fb="fb"
 facebook="facebook"
 
 echo $url
-sleep 3
+sleep 1
 
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
 echo -e "\e[032m" "║ ♚ Tool Name : kimo48/youtube          ║"
@@ -43,7 +43,7 @@ else
 if [[ "$url" =~ .*"$facebook".* ]]; then
   echo "facebook video"
   n=4
-  sleep 3
+  sleep 1
 else
 
 if [[ "$url" =~ .*"$fb".* ]]; then
@@ -57,7 +57,7 @@ fi
 fi 
 
 echo $n
-sleep 3
+sleep 1
 
 
 if [ "$n" == '1' ]; then
