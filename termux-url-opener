@@ -7,6 +7,11 @@ tik="tik"
 insta="insta"
 fb="fb"
 facebook="facebook"
+
+echo $url
+echo "$url"
+sleep 200
+
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
 echo -e "\e[032m" "║ ♚ Tool Name : kimo48/youtube          ║"
 echo -e "\e[032m" "║ ♚ Author : kimo                       ║"
