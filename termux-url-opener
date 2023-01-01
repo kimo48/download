@@ -10,7 +10,7 @@ facebook="facebook"
 
 echo $url
 echo "$url"
-sleep 200
+sleep 2
 
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
 echo -e "\e[032m" "║ ♚ Tool Name : kimo48/youtube          ║"
@@ -23,7 +23,10 @@ echo -e "\e[032m" "╠═▶ 3.tiktok mp3"
 echo -e "\e[032m" "╠═▶ 4.facebook video"
 echo -e "\e[032m" "╠═▶ 5.instagram video"
  printf "\e[032m  ╚═:➤ $kill_color"
- 
+if [[ "$url" =~ .*"$facebook".* ]]; then
+  echo "facebook video"
+  n=4
+else
 if [[ "$url" =~ .*"$you".* ]]; then
   echo "youtube"
   n=1
@@ -40,10 +43,6 @@ if [[ "$url" =~ .*"$insta".* ]]; then
 else
 if [[ "$url" =~ .*"$fb".* ]]; then
   echo "fb video"
-  n=4
-else
-if [[ "$url" =~ .*"$facebook".* ]]; then
-  echo "facebook video"
   n=4 
 fi
 fi   
