@@ -9,7 +9,6 @@ fb="fb"
 facebook="facebook"
 
 echo $url
-echo "$url"
 sleep 2
 
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
@@ -26,6 +25,7 @@ echo -e "\e[032m" "╠═▶ 5.instagram video"
 if [[ "$url" =~ .*"$facebook".* ]]; then
   echo "facebook video"
   n=4
+  sleep 4
 else
 if [[ "$url" =~ .*"$you".* ]]; then
   echo "youtube"
