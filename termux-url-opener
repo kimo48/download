@@ -55,8 +55,8 @@ fi
 fi 
 fi 
 
-echo $n
-sleep 1
+#echo $n
+#sleep 1
 
 
 if [ "$n" == '1' ]; then
