@@ -75,6 +75,8 @@ if [ "$n" == '9' ]; then
 
 read n
 
+else
+
 if [ "$n" == '2' ]; then
 echo "download video"
 echo "$url"
